@@ -1,0 +1,4 @@
+<div style="background-color: rgb(58, 192, 170);text-align: center;">
+<h1> {{ message }} </h1>
+</div>
+<app-test (childEvent) = "message = $event" [parentData]="name"></app-test>

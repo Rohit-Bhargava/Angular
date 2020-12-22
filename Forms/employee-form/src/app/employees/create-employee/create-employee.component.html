@@ -1,0 +1,110 @@
+<div class="card card-primary">
+<form>
+    <div class="card-header">
+    <div class="card-title">
+    <h2><u>Employee Form</u></h2>
+    </div>
+</div>
+<br>
+<div class="card-body">
+    <div class="form-group row">
+        <label for="name" class="col-xl-1 col-form-label">Name :</label>
+        <div class="col-xl-8">
+        <input type="text" name="name" id="eName" required class="form-control">
+        </div>
+        <div>
+            <small class="text-danger">*</small><br>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="email" class="col-xl-1 col-form-label">Email :</label>
+        <div class="col-xl-8">
+        <input type="email" name="email" id="eMail" required class="form-control">
+        </div>
+        <div>
+        <small class="text-danger">*</small><br>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="phoneNumber" class="col-xl-1 col-form-label">Phone :</label>
+        <div class="col-xl-8">
+        <input type="tel" name="phoneNumber" id="phone_Number" pattern="^\d{10}$" class="form-control">
+        </div>
+        <div>
+            <small class="text-danger">* Phone number is required   </small><br>
+            <small class="text-danger">* Phone number must be 10 digits</small>
+        </div>
+    </div>
+    <br>
+    <div class="form-group row">
+        <label for="gender" class="col-sm-2 col-form-label">Gender :</label>
+        <div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline1" name="customRadioInline1" required class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">Male</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline2" name="customRadioInline1" required class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline2">Female</label>
+            <div class="custom-control">
+                <small class="text-danger">*</small>
+            </div>
+          </div>
+        </div>
+    </div>
+    <br>
+    <div class="form-group row">
+        <label for="contactPreference" class="col-sm-2 col-form-label">Contact Preference :</label>
+        <div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline3" name="customRadioInline3" required class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline3">Email</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline4" name="customRadioInline3" required class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline4">Phone Number</label>
+            <div class="custom-control">
+                <small class="text-danger">*</small>
+            </div>  
+        </div>
+        </div>
+    </div>
+    <br>
+    <div class="form-group row">
+        <label for="contactPreference" class="col-xl-2 col-form-label">Date Of Birth :</label>
+        <input type="date" name="customDateInline" required class="custom-control-inline">
+        <div>
+            <small class="text-danger">*</small><br>
+        </div>
+    </div>
+    <br>
+    <div class="form-group row">
+        <label for="department" class="col-xl-2 col-form-label">Department :</label>
+        <select id="department" name="department" required>
+            <option value="IT">IT</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Finance">Finance</option>
+            <option value="HRD">HRD</option>
+        </select>
+        <div class="custom-control">
+            <small class="text-danger">*</small>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label for="myfile">Select a Image :  </label>
+        <input type="file" id="myfile" name="myfile">
+    </div>
+    <br>
+    <div>
+        <input type="checkbox" name="isActive" chaked>
+        <label for="isActive">  Active </label>
+    </div>
+    <hr>
+    <div class="card-defulte">
+        <button type="submit" class="btn btn-primary btn-x"> Save </button>
+    </div>
+    <hr>
+</div>
+</form>
+</div>

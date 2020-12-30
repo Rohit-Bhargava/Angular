@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
 import { StudentService } from 'src/app/shared/student.service';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
-  selector: 'app-student',
-  templateUrl: './student.component.html',
-  styleUrls: ['./student.component.styl']
+  selector: 'app-update-student',
+  templateUrl: './update-student.component.html',
+  styleUrls: ['./update-student.component.styl']
 })
-export class StudentComponent implements OnInit {
+export class UpdateStudentComponent implements OnInit {
 
   message!: string;
   constructor(public service: StudentService, private fireStore: AngularFirestore) { }
@@ -43,7 +42,7 @@ export class StudentComponent implements OnInit {
     if (form.value.id == null) {
       this.fireStore.collection('students').add(studentData);
       this.message = studentData.fullName + ' information is successfully saved!';
-    } else {
+   } else{
       // Does the update operation for the selected student.
       // The 'studentData' object has the updated details of the student.
       this.fireStore.doc('students/' + form.value.id).update(studentData);

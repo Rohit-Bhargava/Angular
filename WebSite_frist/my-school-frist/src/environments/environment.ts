@@ -5,13 +5,12 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "<SOME_INFORMATION>",
-    authDomain: "<SOME_INFORMATION>",
-    databaseURL: "<SOME_INFORMATION>",
-    projectId: "<SOME_INFORMATION>",
-    storageBucket: "<SOME_INFORMATION>",
-    messagingSenderId: "<SOME_INFORMATION>",
-    appId: "<SOME_INFORMATION>"
+    apiKey: "AIzaSyCWb5RhHcKPnGlg0t5mZuKbXLg2mgnYbo8",
+    authDomain: "files-uplode.firebaseapp.com",
+    projectId: "files-uplode",
+    storageBucket: "files-uplode.appspot.com",
+    messagingSenderId: "205103803727",
+    appId: "1:205103803727:web:501630943b0ef98bd9293a"
   }
 };
 

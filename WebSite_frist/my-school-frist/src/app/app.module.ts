@@ -9,7 +9,12 @@ import { SubjectComponent } from './subjects/subject.component';
 import { StudentsComponent } from './students/students/students.component';
 import { StudentComponent } from './students/student/student.component';
 import { StudentListComponent } from './students/student-list/student-list.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { from } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { StudentService } from './shared/student.service';
+import { UpdateStudentComponent } from './update-student/update-student.component';
 
 
 @NgModule({
@@ -19,14 +24,17 @@ import { StudentListComponent } from './students/student-list/student-list.compo
     SubjectComponent,
     StudentsComponent,
     StudentComponent,
-    StudentListComponent
+    StudentListComponent,
+    UpdateStudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

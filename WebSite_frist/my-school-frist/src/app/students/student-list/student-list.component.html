@@ -1,1 +1,39 @@
-<p>student-list works!</p>
+<div class="container">
+    <div class="card">
+       <h1 class="display-5 text-center">Student Details</h1>
+    </div>
+    <div class="card" align="center">     
+        <table class="table table-bordered">
+            <thead align="center">
+                <th>Roll No.</th>
+                <th>Name</th>
+                <th>Branch Name</th>
+                <th>Guardian Phone No.</th>
+                <th>Edit?</th>
+                <th>Delete?</th>
+            </thead>
+            <tbody align="center">
+                <tr *ngFor="let studentInfo of studentList">
+                    <td>{{studentInfo.rollNo}}<span>.</span></td>
+                    <td>{{studentInfo.fullName}}</td>
+                    <td>{{studentInfo.branchName}}</td>
+                    <td>{{studentInfo.guardianPhoneNo}}</td>
+                    <td><a class="btn text-danger" (click)="onEdit(studentInfo)">Edit</a></td>
+                    <td><a class="btn text-danger" (click)="onDelete(studentInfo)">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>               
+    <div class="error" *ngIf="deleteMessage">
+        <h5 class="text-dark">{{ deleteMessage }}</h5>
+    </div>
+    <br>
+    <div class="col-2"><a href="student">Student Registration</a></div>
+</div>
+<br>  
+<div class="container">
+    <div class="card">
+        <app-update-student></app-update-student>
+    </div>                            
+</div>

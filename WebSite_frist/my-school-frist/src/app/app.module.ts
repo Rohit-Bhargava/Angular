@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TeacherComponent } from './teacher/teacher.component';
@@ -19,10 +19,9 @@ import { environment } from 'src/environments/environment';
 import { StudentService } from './shared/student.service';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { SetStudyMaterialsComponent } from './set-study-materials/set-study-materials.component';
-import { UploadFormComponent } from './upload-form/upload-form.component';
-import { UploadDetailsComponent } from './upload-details/upload-details.component';
-import { UploadListComponent } from './upload-list/upload-list.component';
-
+import { DropzoneDirective } from './dropzone.directive';
+import { UploaderComponent } from './uploader/uploader.component';
+import { UploadTaskComponent } from './upload-task/upload-task.component';
 
 @NgModule({
   declarations: [
@@ -34,15 +33,16 @@ import { UploadListComponent } from './upload-list/upload-list.component';
     StudentListComponent,
     UpdateStudentComponent,
     SetStudyMaterialsComponent,
-    UploadFormComponent,
-    UploadDetailsComponent,
-    UploadListComponent
+    DropzoneDirective,
+    UploaderComponent,
+    UploadTaskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireStorageModule,

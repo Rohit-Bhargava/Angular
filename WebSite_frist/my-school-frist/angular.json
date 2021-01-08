@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "styl"
+          "style": "css"
         },
         "@schematics/angular:application": {
           "strict": true
@@ -27,11 +27,11 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
+              "src/assets/icons",
               "src/assets"
             ],
             "styles": [
-              "src/styles.styl"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -91,10 +91,10 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/icons"
             ],
             "styles": [
-              "src/styles.styl"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -127,5 +127,10 @@
       }
     }
   },
-  "defaultProject": "my-school"
+  "defaultProject": "my-school",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "css"
+    }
+  }
 }

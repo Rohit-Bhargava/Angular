@@ -7,6 +7,7 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { StudentsComponent } from './students/students/students.component';
 import { StudentComponent } from './students/student/student.component';
 import { StudentListComponent } from './students/student-list/student-list.component';
+import { SetStudyMaterialsComponent } from './set-study-materials/set-study-materials.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'students', component: StudentsComponent },
   { path: 'student', component: StudentComponent },
   { path: 'student-list', component: StudentListComponent },
+  { path: 'set-study-mat', component: SetStudyMaterialsComponent },
   { path: '', redirectTo:'/home', pathMatch:'full'}
 ];
 

@@ -22,6 +22,7 @@ import { SetStudyMaterialsComponent } from './set-study-materials/set-study-mate
 import { DropzoneDirective } from './dropzone.directive';
 import { UploaderComponent } from './uploader/uploader.component';
 import { UploadTaskComponent } from './upload-task/upload-task.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { UploadTaskComponent } from './upload-task/upload-task.component';
     SetStudyMaterialsComponent,
     DropzoneDirective,
     UploaderComponent,
-    UploadTaskComponent
+    UploadTaskComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
